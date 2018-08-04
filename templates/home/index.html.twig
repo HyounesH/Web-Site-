@@ -1,0 +1,333 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}gite.buro {% endblock %}
+{% block stylesheet %} {{parent()}}{% endblock %}
+{% block body %}
+
+<header id="header"><!--header-->
+		<div class="header_top"><!--header_top-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="contactinfo">
+							<ul class="nav nav-pills">
+								<li><a href="#"><i class="fa fa-phone"></i> +212 5 60 22 14 20</a></li>
+								<li><a href="#"><i class="fa fa-envelope"></i> gite.buro@contact.com</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="social-icons pull-right">
+							<ul class="nav navbar-nav">
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+								<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header_top-->
+
+        <div class="header-middle"><!--header-middle-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-3">
+						<div class="logo pull-left">
+							<a href="index.html"><img src="{{asset('images/home/logo_en.png')}}" alt="" /></a>
+						</div>
+					</div>
+					<div class="col-sm-9">
+                       <div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<div class="shop-menu pull-right">
+							<ul class="nav navbar-nav collapse navbar-collapse">
+								<li><a href="#">Acceuil</a></li>
+								<li><a href="#">Qui sommes-nous</a></li>
+								<li><a href="#"> Services</a></li>
+								<li><a href="#"> Contatez-nous</a></li>
+								<li><a href="#"> Rentrée scolaire</a></li>
+                                <li><a href="#"> Demande devis</a></li>
+							</ul>
+						</div>
+					</div>   
+				</div>
+			</div>
+		</div><!--/header-middle-->
+        </br>
+        <div class="container">
+          <div class="row">
+             <div class="col-sm-3 pull-right">
+				<div class="search_box pull-right">
+					<input type="text" placeholder="Search"/>
+			    </div>
+			 </div>
+          </div>
+        </div>
+   </header>
+   <section id="slider"><!--slider-->
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div id="slider-carousel" class="carousel slide" data-ride="carousel">
+						<ol class="carousel-indicators">
+							<li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
+							<li data-target="#slider-carousel" data-slide-to="1"></li>
+							<li data-target="#slider-carousel" data-slide-to="2"></li>
+						</ol>
+						
+						<div class="carousel-inner">
+							<div class="item active">
+								<div class="col-sm-6">
+									<h1><span>I</span>nfromatique</h1>
+									<h2>matériel informatique chez <span class="gite">gite</span>.<span class="buro">buro</span></h2>
+									<p>gite.buro vous propose l'exceptionnelle étendue des gammes mises à votre disposition : les PC, les Imprimantes... </p>
+									<button type="button" class="btn btn-default get">Get it now</button>
+								</div>
+								<div class="col-sm-6">
+									<img src="images/home/product4.png" class="girl img-responsive" alt="" />
+								</div>
+							</div>
+							<div class="item">
+								<div class="col-sm-6">
+									<h1><span>B</span>ureautique</h1>
+									<h2>trouver tout le matériel de bureau au même endroit</h2>
+									<p>
+Parfois, il vous suffit de noter les choses, de réorganiser votre classeur ou de prendre un coup de poing pour le projet d'artisanat de vos enfants. Quelle que soit la tâche, les essentiels de bureau sont toujours en demande. Et vous les trouverez tous chez nous .</p>
+									<button type="button" class="btn btn-default get">Get it now</button>
+								</div>
+								<div class="col-sm-6">
+									<img src="images/home/product2.png" class="girl img-responsive" alt="" />
+								</div>
+							</div>
+							
+							<div class="item">
+								<div class="col-sm-6">
+									<h1><span>S</span>colaire</h1>
+									<h2>Fournitures Scolaires chez <span class="gite">gite</span>.<span class="buro">buro</span></h2>
+									<p>gite.buro vous propose des fournitures scolaire avec des prix exceptionnelle  et de bonne qualité. </p>
+									<button type="button" class="btn btn-default get">Get it now</button>
+								</div>
+								<div class="col-sm-6">
+									<img src="images/home/product3.png" class="girl img-responsive" alt="" />
+								</div>
+							</div>
+							
+						</div>
+						
+						<a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
+							<i class="fa fa-angle-left"></i>
+						</a>
+						<a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
+							<i class="fa fa-angle-right"></i>
+						</a>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</section><!--/slider-->
+	<br/>
+	<section>
+		<div class="container">
+			<div class="row">
+				
+				<div class="padding-right">
+					<div class="features_items"><!--features_items-->
+						<h2 class="title text-center">Qui sommes-nous ?</h2>
+			            <div class="col-sm-8">
+                          <h2 id="about-us"><b><span class="gite" style="color:#00adef;">gite</span>.<span class="buro" style="color:#06ce38;">buro</span></b></h2><br>
+                            <h4>gite.buro est une sociéte qui offre des service et  des produits dans le domaine  bureautique, scolaire ainsi que le domaine informatique .</h4><br>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <br><button class="btn btn-default btn-lg about-us">Découvrer notre histoire</button>
+                        </div>
+                        <div class="col-sm-4">
+						  <img src="images/home/about-us.png" class="girl img-responsive" alt="" />
+                        </div>
+	                </div>
+				</div>
+			</div>
+		</div>
+	</section>				
+	<br/>
+	<section>
+		<div class="container">
+			<div class="row">
+				
+				<div class="padding-right">
+					<div class="features_items"><!--features_items-->
+						<h2 class="title text-center">Services</h2>
+						<div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+										<div class="productinfo text-center">
+											<img src="images/home/service1.png" alt="" />
+											<p></p>
+											<a href="#" class="btn btn-default add-to-cart">&nbsp;&nbsp;Informatique&nbsp;&nbsp;</a>
+										</div>
+										<div class="product-overlay">
+											<div class="overlay-content">
+												<div class="card">
+                                              <div class="card-body text-center">
+                                                 <h4 class="card-title">Service Informatique</h4>
+									             <p> des offres des services informatique exceptionnelle étendue des gammes mises à votre disposition par gite.buro: les PC, les Imprimantes... </p>                                                   
+									             <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                              </div>
+                                            </div>
+											</div>
+										</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="productinfo text-center">
+										<img src="images/home/service2.png" alt="" />
+										<p></p>
+										<a href="#" class="btn btn-default add-to-cart">&nbsp;&nbsp;Bureautique&nbsp;&nbsp;</a>
+									</div>
+									<div class="product-overlay">
+										<div class="overlay-content">
+											<div class="card">
+                                              <div class="card-body text-center">
+                                                 <h4 class="card-title">Service Bureautique</h4>
+                                                   <p class="card-text">Parfois, il vous suffit de noter les choses, de réorganiser votre classeur ou de prendre un coup de poing pour le projet d'artisanat de vos enfants. Quelle que soit la tâche, les essentiels de bureau sont toujours en demande. Et vous les trouverez tous chez gite.buro</p>
+                                                     <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                              </div>
+                                            </div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="productinfo text-center">
+										<img src="images/home/service3.png" alt="" />
+										<p></p>
+										<a href="#" class="btn btn-default add-to-cart">&nbsp;&nbsp;Scolaire&nbsp;&nbsp;</a>
+									</div>
+									<div class="product-overlay">
+										<div class="overlay-content">
+											<div class="card">
+                                              <div class="card-body text-center">
+                                                 <h4 class="card-title">Service scolaire</h4>
+                                                   <p class="card-text">gite.buro vous propose des fournitures scolaire avec des prix exceptionnelle  et de bonne qualité.</p>
+                                                     <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                              </div>
+                                            </div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+    <br/>
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="padding-right">
+					<div class="features_items"><!--features_items-->
+						<h2 class="title text-center">Contatez-nous</h2>
+                        <div id="contact-page" class="container">
+    	               <div class="bg">
+	    	       <div class="row">    		
+	    		<div class="col-sm-12">			    				    				
+					<div id="gmap" class="contact-map">
+					</div>
+				</div>			 		
+			</div>   	
+    		<div class="row">  	
+	    		<div class="col-sm-8">
+	    			<div class="contact-form">
+	    				<h2 class="title text-center">Formulaire de contact</h2>
+	    				<div class="status alert alert-success" style="display: none"></div>
+				    	<form id="main-contact-form" class="contact-form row" name="contact-form" method="post">
+				            <div class="form-group col-md-6">
+				                <input type="text" name="name" class="form-control" required="required" placeholder="Votre nom">
+				            </div>
+				            <div class="form-group col-md-6">
+				                <input type="email" name="email" class="form-control" required="required" placeholder="Email">
+				            </div>
+				            <div class="form-group col-md-12">
+				                <input type="text" name="subject" class="form-control" required="required" placeholder="Objet">
+				            </div>
+				            <div class="form-group col-md-12">
+				                <textarea name="message" id="message" required="required" class="form-control" rows="8" placeholder="Votre message"></textarea>
+				            </div>                        
+				            <div class="form-group col-md-12">
+				                <input type="submit" name="submit" class="btn btn-primary pull-right" value="Submit">
+				            </div>
+				        </form>
+	    			</div>
+	    		</div>
+	    		<div class="col-sm-4">
+	    			<div class="contact-info">
+	    				<h2 class="title text-center">Contact Info</h2>
+	    				<address>
+	    					<p><b>gite.buro</b></p>
+							<p>935 Avenue Mohamed v immeuble fatiha</p>
+							<p>Rabat MAR</p>
+							<p>Mobile: +212 6 60 22 14 20</p>
+							<p>Fax: +212 5 60 22 14 20</p>
+							<p>Email: gite.buro@contact.com</p>
+	    				</address>
+	    				<div class="social-networks">
+	    					<h2 class="title text-center">Réseau social</h2>
+							<ul>
+								<li>
+									<a href="#"><i class="fa fa-facebook"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="fa fa-twitter"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="fa fa-google-plus"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="fa fa-youtube"></i></a>
+								</li>
+							</ul>
+	    				</div>
+	    			</div>
+    			</div>    			
+	    	</div>  
+    	</div>	
+    </div><!--/#contact-page-->
+                      
+				    </div>
+				</div>
+			</div>
+		</div>
+	</section>						
+
+{% endblock %}
+{% block javascripts %} {{parent()}}
+<script>
+function myMap() {
+var myCenter = new google.maps.LatLng(41.878114, -87.629798);
+var mapProp = {center:myCenter, zoom:12, scrollwheel:false, draggable:false, mapTypeId:google.maps.MapTypeId.ROADMAP};
+var map = new google.maps.Map(document.getElementById("gmap"),mapProp);
+var marker = new google.maps.Marker({position:myCenter});
+marker.setMap(map);
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMLj5T5PSneJ-YIE1mYuP_OiCT08VX3Cg&callback=myMap"></script>
+</script>
+
+{% endblock %}
+

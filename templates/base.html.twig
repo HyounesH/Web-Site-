@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        {% block stylesheets %}
+        <link href="{{ asset('build/css/app.css') }}" rel="stylesheet" />
+        {% endblock %}
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+        {% block footer %} 
+        <!--Footer-->
+<footer id="footer">
+    <div class="container">
+        <div class="row-fluid">
+            <div class="span5 cp">
+                &copy; 2018 gite.buro . All Rights Reserved.
+            </div>
+            <!--/Copyright-->
+
+            <div class="span6">
+                <ul class="social pull-right">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>                
+                </ul>
+            </div>
+
+            <div class="span1">
+                <a id="gototop" class="gototop pull-right" href="#"><i class="icon-angle-up"></i></a>
+            </div>
+            <!--/Goto Top-->
+        </div>
+    </div>
+</footer>
+        {% endblock %}
+        {% block javascripts %}
+        <script src="{{ asset('build/js/jquery.js') }}"></script>
+        <script src="{{ asset('build/js/jquery.min.js') }}"></script>
+        <script src="{{ asset('build/js/jquery.scrollUp.min.js') }}"></script>
+	    <script src="{{ asset('build/js/price-range.js') }}"></script>
+        <script src="{{ asset('build/js/jquery.prettyPhoto.js') }}"></script>
+	    <script src="{{ asset('build/js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('build/js/main.js') }}"></script>
+        {% endblock %}
+    </body>
+</html>
