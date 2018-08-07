@@ -36,4 +36,13 @@ class HomeController extends Controller
             'controller_name' => 'HomeController',
         ]);
     }
+        /**
+     * @Route("/about", name="about")
+     */
+    public function about()
+    {
+        return $this->render('home/about.html.twig', [
+            'controller_name' => 'HomeController',
+        ]);
+        }
 }
