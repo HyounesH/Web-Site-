@@ -50,10 +50,11 @@
 						</div>
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav collapse navbar-collapse">
-								<li><a href="#">Acceuil</a></li>
+								<li><a href="{{ url('home') }}" class="active">Acceuil</a></li>
 								<li><a href="#">Qui sommes-nous</a></li>
 								<li><a href="#"> Services</a></li>
-								<li><a href="#"> Contatez-nous</a></li>
+								<li><a href="{{'catalogue'}}">catalogue</a></li>
+								<li><a href="{{ url('contact')}}"> Contatez-nous</a></li>
 								<li><a href="#"> Rentrée scolaire</a></li>
                                 <li><a href="#"> Demande devis</a></li>
 							</ul>
@@ -313,8 +314,8 @@ Parfois, il vous suffit de noter les choses, de réorganiser votre classeur ou d
 				</div>
 			</div>
 		</div>
-	</section>						
-
+	</section>	
+	
 {% endblock %}
 {% block javascripts %} {{parent()}}
 <script>

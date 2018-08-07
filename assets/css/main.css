@@ -51,7 +51,7 @@ a#scrollUp {
   bottom: 0px;
   right: 10px;
   padding: 5px 10px;
-  background: #FE980F;
+  background: #06ce38;
   color: #FFF;
   -webkit-animation: bounce 2s ease infinite;
   animation: bounce 2s ease infinite;
@@ -216,6 +216,10 @@ a#scrollUp i{
 .shop-menu ul li a:hover {
 	color:#00adef;
 	background:#fff;
+}
+.shop-menu ul li .active{
+  color:#00adef !important;
+	background:#fff !important;
 }
 
 
@@ -617,7 +621,7 @@ ul.sub-menu {
   color: #00adef;
 }
 .item h2 .buro{
- color:#06ce38
+ color:#06ce38;
 }
 .item  p {
 	color:#363432;
@@ -972,7 +976,7 @@ h2.title {
 }
 
 .add-to-cart:hover {
-  background: #FE980F;
+  background: #06ce38;
   color: #FFFFFF;
 }
 
@@ -1003,7 +1007,7 @@ h2.title {
 
 .category-tab ul {
   background: #40403E;
-  border-bottom: 1px solid #FE980F;
+  border-bottom: 1px solid #00adef;
   list-style: none outside none;
   margin: 0 0 30px;
   padding: 0;
@@ -1021,7 +1025,7 @@ h2.title {
 }
 
 .category-tab ul  li  a:hover{
-	background:#FE980F;
+	background:#00adef;
 	color:#fff;
 }
 
@@ -1030,7 +1034,7 @@ h2.title {
   -moz-border-left-colors: none;
   -moz-border-right-colors: none;
   -moz-border-top-colors: none;
-  background-color: #FE980F;
+  background-color: #00adef;
   border:0px;
   color: #FFFFFF;
   cursor: default;
@@ -1059,7 +1063,7 @@ h2.title {
 }
 
 .recommended-item-control i {
-  background: none repeat scroll 0 0 #FE980F;
+  background: none repeat scroll 0 0 #06ce38;
   color: #FFFFFF;
   font-size: 20px;
   padding: 4px 10px;
