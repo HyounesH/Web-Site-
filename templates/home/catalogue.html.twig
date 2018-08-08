@@ -1,0 +1,481 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}gite.buro {% endblock %}
+{% block stylesheet %} {{parent()}}{% endblock %}
+{% block body %}
+<header id="header"><!--header-->
+		<div class="header_top"><!--header_top-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="contactinfo">
+							<ul class="nav nav-pills">
+								<li><a href="#"><i class="fa fa-phone"></i> +212 5 60 22 14 20</a></li>
+								<li><a href="#"><i class="fa fa-envelope"></i> gite.buro@contact.com</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="social-icons pull-right">
+							<ul class="nav navbar-nav">
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+								<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+        </div><!--/header_top-->
+        <div class="header-middle"><!--header-middle-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-3">
+						<div class="logo pull-left">
+							<a href="index.html"><img src="{{asset('images/home/logo_en.png')}}" alt="" /></a>
+						</div>
+					</div>
+					<div class="col-sm-9">
+                       <div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<div class="shop-menu pull-right">
+							<ul class="nav navbar-nav collapse navbar-collapse">
+								<li><a href="{{ url('home')}}">Acceuil</a></li>
+								<li><a href="{{url('about')}}">Qui sommes-nous</a></li>
+                                <li><a href="#"> Services</a></li>
+                                <li><a href="{{'catalogue'}}" class="active">Catalogue</a></li>
+								<li><a href="{{url('contact')}}"> Contatez-nous</a></li>
+								<li><a href="#"> Rentrée scolaire</a></li>
+                                <li><a href="#"> Demande devis</a></li>
+							</ul>
+						</div>
+					</div>   
+				</div>
+			</div>
+		</div><!--/header-middle-->
+        <br/>
+        <section>
+		<div class="container">
+			<div class="row">
+                <div class="padding-right">
+                    <div class="category-tab"><!--category-tab-->
+						<div class="col-sm-12">
+							<ul class="nav nav-tabs">
+								<li class="active"><a href="#pc" data-toggle="tab">PC</a></li>
+								<li><a href="#chair" data-toggle="tab">Chaise</a></li>
+								<li><a href="#desk" data-toggle="tab">Bureau</a></li>
+								<li><a href="#bag" data-toggle="tab">Cartable scolaire</a></li>
+								<li><a href="#notebook" data-toggle="tab">fournitures scolaire</a></li>
+							</ul>
+						</div>
+						<div class="tab-content">
+							<div class="tab-pane fade active in" id="pc" >
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+                                                <img src="images/catalogue/pc1.png" alt="" />
+                                                <h6>&nbsp;</h6>
+												<p>MacBook HP</p>
+												<a href="#" class="btn btn-default add-to-cart">Voir</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/catalogue/pc2.png" alt="" />
+												<h5>&nbsp;</h5>
+												<p>MacBook Samsung 2016</p>
+												<a href="#" class="btn btn-default add-to-cart">Voir</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/catalogue/pc3.png" alt="" />
+												<h6>&nbsp;</h6>
+												<p>MacBook</p>
+												<a href="#" class="btn btn-default add-to-cart">Voir</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/catalogue/pc4.png" alt="" />
+												<h6>&nbsp;</h6>
+												<p>MacBook Lenovo</p>
+												<a href="#" class="btn btn-default add-to-cart">Voir</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="tab-pane fade" id="chair" >
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/catalogue/chair1.png" alt="" />
+												<h6>&nbsp;</h6>
+												<p>Chaise Professionel</p>
+												<a href="#" class="btn btn-default add-to-cart">Voir</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/catalogue/chair2.png" alt="" />
+												<h6>&nbsp;</h6>
+												<p>Chaise Medern sympa</p>
+												<a href="#" class="btn btn-default add-to-cart">Voir</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/catalogue/chair3.png" alt="" />
+												<h6>&nbsp;</h6>
+												<p>chaise de bureau simple</p>
+												<a href="#" class="btn btn-default add-to-cart">Voir</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/catalogue/chair4.png" alt="" />
+												<h6>&nbsp;</h6>
+												<p>Chaise Professionel modern</p>
+												<a href="#" class="btn btn-default add-to-cart">Voir</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="tab-pane fade" id="desk" >
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/catalogue/desk1.png" alt="" />
+												<h6>&nbsp;</h6>
+												<p>Bureau personnel sympa</p>
+												<a href="#" class="btn btn-default add-to-cart">Voir</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/catalogue/desk2.png" alt="" />
+												<h6>&nbsp;</h6>
+												<p>Grand Bureau des réunions de travail</p>
+												<a href="#" class="btn btn-default add-to-cart">Voir</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/catalogue/desk3.png" alt="" />
+												<h6>&nbsp;</h6>
+												<p>Bureau Professionel simple</p>
+												<a href="#" class="btn btn-default add-to-cart">Voir</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/catalogue/desk4.png" alt="" />
+												<h6>&nbsp;</h6>
+												<p>Bureau personnel modern & simple</p>
+												<a href="#" class="btn btn-default add-to-cart">Voir</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="tab-pane fade" id="bag" >
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/catalogue/bag1.png" alt="" />
+												<h6>&nbsp;</h6>
+												<p> une belle cartable scolaire</p>
+												<a href="#" class="btn btn-default add-to-cart">Voir</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/catalogue/bag2.png" alt="" />
+												<h6>&nbsp;</h6>
+												<p>Nouvelle année scolaire , nouvelle belle cartable</p>
+												<a href="#" class="btn btn-default add-to-cart">Voir</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/catalogue/bag3.png" alt="" />
+												<h6>&nbsp;</h6>
+												<p>belle cartable scolaire des filles</p>
+												<a href="#" class="btn btn-default add-to-cart">Voir</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/catalogue/bag4.png" alt="" />
+												<h6>&nbsp;</h6>
+												<p>belle cartable scolaire pour les fils</p>
+												<a href="#" class="btn btn-default add-to-cart">Voir</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane fade" id="notebook" >
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/catalogue/notebook1.png" alt="" />
+												<h6>&nbsp;</h6>
+												<p>cahier scolaire</p>
+												<a href="#" class="btn btn-default add-to-cart">Voir</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/catalogue/fourniture.png" alt="" />
+												<h6>&nbsp;</h6>
+												<p>De belles fournitures pour la rentrée scolaire</p>
+												<a href="#" class="btn btn-default add-to-cart">Voir</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/catalogue/notebook5.png" alt="" />
+												<h6>&nbsp;</h6>
+												<p>Dictionnaire anglais anglais</p>
+												<a href="#" class="btn btn-default add-to-cart">Voir</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/catalogue/notebook4.png" alt="" />
+												<h6>&nbsp;</h6>
+												<p>packet des cahiers scolaire pour une bonne nouvelle année scolaire</p>
+												<a href="#" class="btn btn-default add-to-cart">Voir</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+					</div><!--/category-tab-->
+					
+					<div class="recommended_items"><!--recommended_items-->
+						<h2 class="title text-center">produits populaires</h2>
+						
+						<div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
+							<div class="carousel-inner">
+								<div class="item active">	
+									<div class="col-sm-3">
+										<div class="product-image-wrapper">
+											<div class="single-products">
+												<div class="productinfo text-center">
+													<img src="images/catalogue/recom6.png" alt="" />
+													<h6>&nbsp;</h6>
+													<p>PC HP i7 1To</p>
+													<a href="#" class="btn btn-default add-to-cart">Voir</a>
+												</div>
+												
+											</div>
+										</div>
+                                    </div>
+                                    <div class="col-sm-3">
+										<div class="product-image-wrapper">
+											<div class="single-products">
+												<div class="productinfo text-center">
+													<img src="images/catalogue/recom7.png" alt="" />
+													<h6>&nbsp;</h6>
+													<p>Chaise confortable & modern</p>
+													<a href="#" class="btn btn-default add-to-cart">Voir</a>
+												</div>
+												
+											</div>
+										</div>
+                                    </div>
+                                    <div class="col-sm-3">
+										<div class="product-image-wrapper">
+											<div class="single-products">
+												<div class="productinfo text-center">
+													<img src="images/catalogue/recom5.png" alt="" />
+													<h6>&nbsp;</h6>
+													<p>Bureau personnel simple</p>
+													<a href="#" class="btn btn-default add-to-cart">Voir</a>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-3">
+										<div class="product-image-wrapper">
+											<div class="single-products">
+												<div class="productinfo text-center">
+													<img src="images/catalogue/recom4.png" alt="" />
+													<h6>&nbsp;</h6>
+													<p>Pc portable Mac 500Go</p>
+													<a href="#" class="btn btn-default add-to-cart">Voir</a>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="item">     
+									<div class="col-sm-3">
+										<div class="product-image-wrapper">
+											<div class="single-products">
+												<div class="productinfo text-center">
+													<img src="images/catalogue/recom8.png" alt="" />
+													<h6>&nbsp;</h6>
+													<p>Packet des cahiers scolaires</p>
+													<a href="#" class="btn btn-default add-to-cart">Voir</a>
+												</div>
+												
+											</div>
+										</div>
+									</div>	
+									<div class="col-sm-3">
+										<div class="product-image-wrapper">
+											<div class="single-products">
+												<div class="productinfo text-center">
+													<img src="images/catalogue/recom3.png" alt="" />
+													<h6>&nbsp;</h6>
+													<p>Chaise professionel modern</p>
+													<a href="#" class="btn btn-default add-to-cart">Voir</a>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-3">
+										<div class="product-image-wrapper">
+											<div class="single-products">
+												<div class="productinfo text-center">
+													<img src="images/catalogue/recom2.png" alt="" />
+													<h6>&nbsp;</h6>
+													<p>Chaise modern</p>
+													<a href="#" class="btn btn-default add-to-cart">Voir</a>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-3">
+										<div class="product-image-wrapper">
+											<div class="single-products">
+												<div class="productinfo text-center">
+													<img src="images/catalogue/recom1.png" alt="" />
+													<h6>&nbsp;</h6>
+													<p>Bureau professionel modern </p>
+													<a href="#" class="btn btn-default add-to-cart">Voir</a>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							 <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
+								<i class="fa fa-angle-left"></i>
+							  </a>
+							  <a class="right recommended-item-control" href="#recommended-item-carousel" data-slide="next">
+								<i class="fa fa-angle-right"></i>
+							  </a>			
+						</div>
+					</div><!--/recommended_items-->
+                </div>    
+            </div>
+        </div>
+        </section>    
+        
+        {% endblock %}

@@ -1,0 +1,89 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}gite.buro {% endblock %}
+{% block stylesheet %} {{parent()}}{% endblock %}
+{% block body %}
+<header id="header"><!--header-->
+		<div class="header_top"><!--header_top-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="contactinfo">
+							<ul class="nav nav-pills">
+								<li><a href="#"><i class="fa fa-phone"></i> +212 5 60 22 14 20</a></li>
+								<li><a href="#"><i class="fa fa-envelope"></i> gite.buro@contact.com</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="social-icons pull-right">
+							<ul class="nav navbar-nav">
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+								<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+        </div><!--/header_top-->
+        <div class="header-middle"><!--header-middle-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-3">
+						<div class="logo pull-left">
+							<a href="index.html"><img src="{{asset('images/home/logo_en.png')}}" alt="" /></a>
+						</div>
+					</div>
+					<div class="col-sm-9">
+                       <div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<div class="shop-menu pull-right">
+							<ul class="nav navbar-nav collapse navbar-collapse">
+								<li><a href="{{ url('home')}}">Acceuil</a></li>
+								<li><a href="{{url('about')}}" class="active">Qui sommes-nous</a></li>
+                                <li><a href="#"> Services</a></li>
+                                <li><a href="{{'catalogue'}}">Catalogue</a></li>
+								<li><a href="{{url('contact')}}"> Contatez-nous</a></li>
+								<li><a href="#"> Rentrée scolaire</a></li>
+                                <li><a href="#"> Demande devis</a></li>
+							</ul>
+						</div>
+					</div>   
+				</div>
+			</div>
+		</div><!--/header-middle-->
+        <br/>
+        <br/>
+	<section>
+		<div class="container">
+			<div class="row">
+				
+				<div class="padding-right">
+					<div class="features_items"><!--features_items-->
+			            <div class="col-sm-8">
+                          <h2 id="about-us"><b><span class="gite" style="color:#00adef;">gite</span>.<span class="buro" style="color:#06ce38;">buro</span></b></h2><br>
+                            <h4>gite.buro est une sociéte qui offre des service et  des produits dans le domaine  bureautique, scolaire ainsi que le domaine informatique .</h4><br>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <br><button class="btn btn-default btn-lg about-us">Découvrer notre histoire</button>
+                        </div>
+                        <div class="col-sm-4">
+						  <img src="images/home/about-us.png" class="girl img-responsive" alt="" />
+                        </div>
+	                </div>
+				</div>
+			</div>
+		</div>
+	</section>
+    <br/>
+    <br/>
+
+        {% endblock %}
