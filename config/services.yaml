@@ -5,6 +5,7 @@
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: 'en'
+    demande_devis_directory: '%kernel.project_dir%/public/uploads/demande_devis'
 
 services:
     # default configuration for services in *this* file
