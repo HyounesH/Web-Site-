@@ -67,60 +67,78 @@
 		<div class="container">
 			<div class="row">
 				<div class="padding-right">
-					<div class="features_items">	
-	    		       <div class="col-sm-7">
+					<div class="features_items">
+					   <h2 class="titre_page">Demande de devis pour des produits</h2>
+					   <div class="col-sm-1"></div>
+					   <div class="col-sm-5">
+					     <img src="images/home/about-us.png" class="girl img-responsive" alt="" />
+						 <p>935 Avenue Mohamed v immeuble fatiha, Agadir maroc</p>
+					     <p>Tél. : 05 60 22 14 20</p>
+					     <p>Fax :  05 60 22 14 21</p>
+					     <p>Courriel :gite.buro@contact.com
+                         <p>Web : <a href="{{url('home')}}">www.gite.buro.com</a></p>
+					   </div>	
+	    		       <div class="col-sm-5">
 	    			     <div class="contact-form">
-     <form id="main-contact-form" method="post" enctype="multipart/form-data" >
-        <div class="form-group">
-         {{form_label(form.NomSociete)}}
-         {{form_widget(form.NomSociete,{'attr':{'class':'form-control'}})}}
-         {% if form_errors(form.NomSociete) %}
-         <div class="alert alert-danger">
-         {{form_errors(form.NomSociete)}}
-         </div>
-         {% endif %}
-        </div>
-        <div class="form-group">
-         {{form_label(form.telephone)}}
-         {{form_widget(form.telephone,{'attr':{'class':'form-control'}})}}
-         {% if form_errors(form.telephone) %}
-         <div class="alert alert-danger">
-         {{form_errors(form.telephone)}}
-         </div>
-         {% endif %}
-        </div>
-        <div class="form-group">
-         {{form_label(form.email)}}
-         {{form_widget(form.email,{'attr':{'class':'form-control'}})}}
-         {% if form_errors(form.email) %}
-         <div class="alert alert-danger">
-         {{form_errors(form.email)}}
-         </div>
-         {% endif %}
-        </div>
-        <div class="form-group">
-         {{form_label(form.fichier)}}
-         {{form_widget(form.fichier,{'attr':{'class':'form-control'}})}}
-         {% if form_errors(form.fichier) %}
-         <div class="alert alert-danger">
-         demande de devis doit être un document pdf
-         </div>
-         {% endif %}
-        </div>
-        <label class="customcheck">
-        <span>{{form_label(form.conditionUtilisation)}}</span>
-        {{form_widget(form.conditionUtilisation,{'attr':{'type':'checkbox'}})}}
-          <span class="checkmark"></span>
-        </label>
-        <label class="customcheck">
-        <span>{{form_label(form.recevoirOffrEmail)}}</span>
-        {{form_widget(form.recevoirOffrEmail,{'attr':{'type':'checkbox'}})}}
-          <span class="checkmark"></span>
-        </label>
-        {{ form_rest(form) }}
-     </form>
-   </div>
+                           <form id="main-contact-form" method="post" enctype="multipart/form-data" >
+	                        <p style="margin-bottom: 16px; ">
+		                    Pour toute demande de renseignements, remplissez le formulaire<br>
+		                    de contact, nous vous répondrons dans les meilleurs délais.</p>
+                            <div class="form-group">
+                            {{form_label(form.NomSociete)}}
+                            {{form_widget(form.NomSociete,{'attr':{'class':'form-control'}})}}
+                            {% if form_errors(form.NomSociete) %}
+                            <div class="alert alert-danger">
+                            {{form_errors(form.NomSociete)}}
+                            </div>
+                            {% endif %}
+                            </div>
+                            <div class="form-group">
+                            {{form_label(form.telephone)}}
+                            {{form_widget(form.telephone,{'attr':{'class':'form-control'}})}}
+                            {% if form_errors(form.telephone) %}
+                            <div class="alert alert-danger">
+                            {{form_errors(form.telephone)}}
+                            </div>
+                            {% endif %}
+                            </div>
+                            <div class="form-group">
+                            {{form_label(form.email)}}
+                            {{form_widget(form.email,{'attr':{'class':'form-control'}})}}
+                            {% if form_errors(form.email) %}
+                            <div class="alert alert-danger">
+                            {{form_errors(form.email)}}
+                            </div>
+                             {% endif %}
+                            </div>
+                            <div class="form-group">
+                             {{form_label(form.fichier)}}
+                             {{form_widget(form.fichier,{'attr':{'class':'form-control'}})}}
+                             {% if form_errors(form.fichier) %}
+                             <div class="alert alert-danger">
+                             demande de devis doit être un document pdf
+                             </div>
+                             {% endif %}
+                            </div>
+                            <label class="customcheck">
+                            <span>{{form_label(form.conditionUtilisation)}}</span>
+                            {{form_widget(form.conditionUtilisation,{'attr':{'type':'checkbox'}})}}
+                              <span class="checkmark"></span>
+                            </label>
+                            <label class="customcheck">
+                            <span>{{form_label(form.recevoirOffrEmail)}}</span>
+                            {{form_widget(form.recevoirOffrEmail,{'attr':{'type':'checkbox'}})}}
+                              <span class="checkmark"></span>
+                            </label>
+							<p>* Les champs marqués d'une étoile doivent être renseignés.</p>
+                            {{ form_rest(form) }}
 
+		                    <p class="discret">
+                            Les informations recueillies sur ce formulaire sont réceptionnées par mail par la sociéte <span class="gite">gite</span>.<span class="buro">buro</span> pour faciliter le traitement de votre demande. 
+                            Conformément à la loi « informatique et libertés ».
+                            </p>
+                         </form>
+                        </div>
 	    		       </div>
     			    </div>    			
 	    	    </div>  

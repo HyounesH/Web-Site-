@@ -82,3 +82,24 @@ div .alert-danger{
     margin-top: 3px;
     padding: 6px !important;
 }
+.discret {
+    font-style: italic;
+    font-size: 0.93em;
+    color: #666;
+    text-align: justify;
+}
+p .gite {
+color:#00adef;
+}
+p .buro {
+    color:#06ce38;
+}
+.titre_page {
+    background: #00A5D5;
+    color: #FFF;
+    padding: 10px;
+    font-size: 2em;
+    margin-top: 0;
+    font-weight: bold;
+    font-family: nunito, "Nunito", arial;
+}
