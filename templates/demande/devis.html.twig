@@ -1,7 +1,9 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}gite.buro {% endblock %}
-{% block stylesheet %} {{parent()}}{% endblock %}
+{% block stylesheet %} {{parent()}}
+
+{% endblock %}
 {% block body %}
 <header id="header"><!--header-->
 		<div class="header_top"><!--header_top-->
@@ -52,9 +54,9 @@
 								<li><a href="{{url('about')}}">Qui sommes-nous</a></li>
                                 <li><a href="#"> Services</a></li>
                                 <li><a href="{{url('catalogue')}}">Catalogue</a></li>
-								<li><a href="{{url('contact')}}" class="active"> Contatez-nous</a></li>
+								<li><a href="{{url('contact')}}"> Contatez-nous</a></li>
 								<li><a href="#"> Rentrée scolaire</a></li>
-                                <li><a href="{{url('devis')}}"> Demande devis</a></li>
+                                <li><a href="{{url('devis')}}" class="active"> Demande devis</a></li>
 							</ul>
 						</div>
 					</div>   

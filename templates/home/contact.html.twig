@@ -141,3 +141,17 @@
 		</div>
 	</section>
 {% endblock %}
+{% block javascripts %} {{parent()}}
+<script>
+function myMap() {
+var myCenter = new google.maps.LatLng(41.878114, -87.629798);
+var mapProp = {center:myCenter, zoom:12, scrollwheel:false, draggable:false, mapTypeId:google.maps.MapTypeId.ROADMAP};
+var map = new google.maps.Map(document.getElementById("gmap"),mapProp);
+var marker = new google.maps.Marker({position:myCenter});
+marker.setMap(map);
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZkVsc0l-K0H9CQ5UluTdzbQ4xCLXYSkk&callback=myMap"></script>
+</script>
+
+{% endblock %}

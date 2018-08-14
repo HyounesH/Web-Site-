@@ -70,7 +70,7 @@ class DemandeController extends AbstractController
         
     $message = (new \Swift_Message('Demande de devis'))
     ->setFrom($demande->getEmail())
-    ->setTo($demande->getEmail())
+    ->setTo('a.chayme1997@gmail.com')
     ->setBody(
         $this->renderView(
             // templates/demande/demande_email.html.twig

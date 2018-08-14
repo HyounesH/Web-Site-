@@ -103,3 +103,10 @@ p .buro {
     font-weight: bold;
     font-family: nunito, "Nunito", arial;
 }
+
+.title_demande_mail{
+    margin-top:10px;
+    font-family: Arial;
+    font-size: 42px;
+    color: #1a1a1a;
+}

@@ -2532,8 +2532,6 @@ h2.title {
 #footer{background:#333;padding-top:15px;padding-bottom:15px;color:#666}
 #footer a{color:#666}
 #footer a:hover{color:#2dcc70}
-#footer #gototop{height:40px;line-height:40px;width:40px;text-align:center;display:inline-block;background:#1d1d1d;font-size:24px;color:#fff}
-#footer #gototop:hover{background:#2b2b2b;text-decoration:none}
 #footer .cp{margin-top:11px}
 ul.social{list-style:none;margin:10px 0 0;padding:0;display:inline-block}
 ul.social>li{display:inline-block;margin:0 5px}
