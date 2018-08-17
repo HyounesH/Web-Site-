@@ -6,6 +6,19 @@
 @import 'price-range.css';
 @import 'responsive.css'; 
 
+@media only screen and (max-width: 1250px) {
+    .contact .sendemail { max-width: 390px; }
+}
+@media only screen and (max-width: 990px) {
+    .contact .sendemail { padding-top: 175px; }
+}
+@media only screen and (max-width: 660px) { 
+    .contact .sendemail { padding-top: 260px; }
+}
+@media only screen and (max-width: 500px) { 
+    .contact .sendemail h1 { font-size: 25px; }
+    .contact .sendemail { padding: 250px 10px 0 10px; }
+}
 
 .customcheck {
     display: block;
@@ -110,3 +123,77 @@ p .buro {
     font-size: 42px;
     color: #1a1a1a;
 }
+.sec-sub {
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto 80px auto;
+}
+::selection {
+    background: #06ce38;
+    color: #fff;
+}
+.services ul {
+    padding-top: 15px;
+    margin: 0 auto;
+    max-width: 960px;
+    margin-top:-10px;
+}
+.contact {
+    float: left;
+    width: 100%;
+    background: #f6f6f6;
+    position: relative;
+    padding-bottom: 120px;
+}
+.contacimg {
+    width: 100%;
+    height: 540px;
+    background: url('../../public/images/services/contactimg.png') left center no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+.contact .contactinfo{
+    width: 540px;
+    padding: 30px;
+    background: #fff;
+    float: right;
+    margin-top: -320px;
+    z-index: 2;
+    position: relative;
+    border: 1px solid #eee;
+}
+.contact .contactinfo h1 {
+    color: #00adef;
+    font-size: 36px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+.contact .contactinfo p {
+    margin-bottom: 40px;
+    color: #222;
+}
+.contact .row { margin-top: 40px; }
+.contact .contactinfo ul {
+    margin-left: 30px;
+}
+.contact .contactinfo ul li {
+    margin-bottom: 30px;
+    padding-left: 60px;
+    color: #222;
+}
+.contact .contat-mail {
+    background: url('../../public/images/services/mail.png') left top no-repeat;
+}
+.contact .contat-phone {
+    background: url('../../public/images/services/phone.png') left top no-repeat;
+}
+.contact .contat-map {
+    background: url('../../public/images/services/map.png') left top no-repeat;
+}
+.contact .sendemail {max-width: 600px;margin-left: 30px;}
+.contact .sendemail h1 { color: #333; font-size: 32px; margin-bottom: 20px;  }
+.contact .sendemail p { margin-bottom: 30px;}
+.sec { width: 100%; padding: 80px 0 100px 0; float: left; background: #fbfcfc; }
+.btn {background: #06ce38; padding: 15px 40px; float: left; color: #fff; text-transform: uppercase; border-radius: 3px; min-width: 20px; text-align: center; transition: all .3s cubic-bezier(0.46, 0, 0.07, 1); }
+.btn:hover { color: #fff; min-width: 100%; transition: all .4s cubic-bezier(0.46, 0, 0.07, 1); }

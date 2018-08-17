@@ -52,10 +52,15 @@
 							<ul class="nav navbar-nav collapse navbar-collapse">
 								<li><a href="{{ url('home') }}" class="active">Acceuil</a></li>
 								<li><a href="{{url('about')}}">Qui sommes-nous</a></li>
-								<li><a href="#"> Services</a></li>
+								<li><a href="{{url('service')}}"> Services</a></li>
 								<li><a href="{{'catalogue'}}">catalogue</a></li>
 								<li><a href="{{ url('contact')}}"> Contatez-nous</a></li>
-								<li><a href="#"> Rentrée scolaire</a></li>
+								<li class="dropdown"><a href="#">Rentrée scolaire<i class="fa fa-angle-down"></i></a>
+                                    <ul role="menu" class="sub-menu">
+                                        <li><a href="#">Liste fourniture</a></li>
+										<li><a href="#">Commander fourniture</a></li>
+                                    </ul>
+                                </li> 
                                 <li><a href="{{url('devis')}}"> Demande devis</a></li>
 							</ul>
 						</div>
@@ -91,7 +96,7 @@
 									<h1><span>I</span>nfromatique</h1>
 									<h2>matériel informatique chez <span class="gite">gite</span>.<span class="buro">buro</span></h2>
 									<p>gite.buro vous propose l'exceptionnelle étendue des gammes mises à votre disposition : les PC, les Imprimantes... </p>
-									<button type="button" class="btn btn-default get">Get it now</button>
+									<button type="button" class="btn btn-default get">Achetez le maintenant </button>
 								</div>
 								<div class="col-sm-6">
 									<img src="images/home/product4.png" class="girl img-responsive" alt="" />
@@ -103,7 +108,7 @@
 									<h2>trouver tout le matériel de bureau au même endroit</h2>
 									<p>
 Parfois, il vous suffit de noter les choses, de réorganiser votre classeur ou de prendre un coup de poing pour le projet d'artisanat de vos enfants. Quelle que soit la tâche, les essentiels de bureau sont toujours en demande. Et vous les trouverez tous chez nous .</p>
-									<button type="button" class="btn btn-default get">Get it now</button>
+									<button type="button" class="btn btn-default get">Achetez le maintenant </button>
 								</div>
 								<div class="col-sm-6">
 									<img src="images/home/product2.png" class="girl img-responsive" alt="" />
@@ -115,7 +120,7 @@ Parfois, il vous suffit de noter les choses, de réorganiser votre classeur ou d
 									<h1><span>S</span>colaire</h1>
 									<h2>Fournitures Scolaires chez <span class="gite">gite</span>.<span class="buro">buro</span></h2>
 									<p>gite.buro vous propose des fournitures scolaire avec des prix exceptionnelle  et de bonne qualité. </p>
-									<button type="button" class="btn btn-default get">Get it now</button>
+									<button type="button" class="btn btn-default get">Achetez le maintenant </button>
 								</div>
 								<div class="col-sm-6">
 									<img src="images/home/product3.png" class="girl img-responsive" alt="" />

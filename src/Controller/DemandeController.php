@@ -5,6 +5,7 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\DemandeDevis;
+use App\Entity\Contact;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
@@ -12,9 +13,40 @@ use Symfony\Component\Form\Extension\Core\Type\TelType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class DemandeController extends AbstractController
 {
+
+
+     /**
+     * @Route("/contact", name="contact")
+     */
+    public function contact(Request $request ,\Swift_Mailer $mailer)
+    {
+        $contact=new Contact();
+        $form = $this->createFormBuilder($contact)
+                ->add('nom',TextType::class,array('attr'=>array('placeholder'=>'Votre nom'),'label'=>false))
+                ->add('email',TextType::class,array('attr'=>array('placeholder'=>'Email'),'label'=>false))
+                ->add('subject',TextType::class,array('attr'=>array('placeholder'=>'Objet'),'label'=>false))
+                ->add('message',TextareaType::class,array('attr'=>array('placeholder'=>'Votre message',),'label'=>false))
+                ->add('Envoyer',SubmitType::class,array('attr'=>array('class'=>'btn btn-primary pull-right')))
+                ->getForm();
+                $form->handleRequest($request);
+
+                  if ($form->isSubmitted() && $form->isValid()) {
+
+                    $contact = $form->getData();
+                    $this->sendMailContact($contact,$mailer);
+                    $entityManager = $this->getDoctrine()->getManager();
+                    $entityManager->persist($contact);
+                    $entityManager->flush();
+                    
+                    return $this->redirectToRoute('home');
+                  }
+        return $this->render('home/contact.html.twig',array('form'=>$form->createView()));
+    }
+
     /**
      * @Route("/demande", name="devis")
      */
@@ -41,9 +73,7 @@ class DemandeController extends AbstractController
                     $fileName = $this->generateUniqueFileName().'.'.$file->guessExtension();
                     // moves the file to the directory where  the document devis  are stored
                    $file->move(
-                   $this->getParameter('demande_devis_directory'),
-                   $fileName
-            );
+                   $this->getParameter('demande_devis_directory'),$fileName);
                     $demande->setFichier($fileName);
                     $this->sendMail($demande,$mailer);
                     $entityManager = $this->getDoctrine()->getManager();
@@ -68,7 +98,7 @@ class DemandeController extends AbstractController
 
     public function sendMail(DemandeDevis $demande , \Swift_Mailer $mailer){
         
-    $message = (new \Swift_Message('Demande de devis'))
+    $message = (new \Swift_Message('demande de devis'))
     ->setFrom($demande->getEmail())
     ->setTo('a.chayme1997@gmail.com')
     ->setBody(
@@ -81,5 +111,20 @@ class DemandeController extends AbstractController
     );
     $mailer->send($message);
     }
+    public function sendMailContact(Contact $contact , \Swift_Mailer $mailer){
+        
+        $message = (new \Swift_Message($contact->getSubject()))
+        ->setFrom($contact->getEmail())
+        ->setTo('a.chayme1997@gmail.com')
+        ->setBody(
+            $this->renderView(
+                // templates/home/contact-email.html.twig
+                'home/contact-email.html.twig',
+                array('contact' => $contact)
+            ),
+            'text/html'
+        );
+        $mailer->send($message);
+        }
 
 }

@@ -12,37 +12,27 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return $this->render('home/index.html.twig', [
-            'controller_name' => 'HomeController',
-        ]);
+        return $this->render('home/index.html.twig');
     }
-
-    /**
-     * @Route("/contact", name="contact")
-     */
-    public function contact()
-    {
-        return $this->render('home/contact.html.twig', [
-            'controller_name' => 'HomeController',
-        ]);
-    }
-
         /**
      * @Route("/catalogue", name="catalogue")
      */
     public function catalogue()
     {
-        return $this->render('home/catalogue.html.twig', [
-            'controller_name' => 'HomeController',
-        ]);
+        return $this->render('home/catalogue.html.twig');
     }
         /**
      * @Route("/about", name="about")
      */
     public function about()
     {
-        return $this->render('home/about.html.twig', [
-            'controller_name' => 'HomeController',
-        ]);
+        return $this->render('home/about.html.twig');
         }
+    /**
+     * @Route("/services", name="service")
+     */
+    public function service()
+    {
+        return $this->render('home/services.html.twig');
+        }    
 }

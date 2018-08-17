@@ -24,7 +24,7 @@ class DemandeDevis
 
     /**
      * @ORM\Column(type="decimal", precision=10, scale=0)
-     * @Assert\Regex(pattern="/^0[67][0-9]{8}$/", message="le numéro de télephone n'est pas valide")
+     * @Assert\Regex(pattern="/^0[567][0-9]{8}$/", message="le numéro de télephone n'est pas valide")
      */
     private $telephone;
 
