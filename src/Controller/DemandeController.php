@@ -18,35 +18,6 @@ use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 class DemandeController extends AbstractController
 {
 
-
-     /**
-     * @Route("/contact", name="contact")
-     */
-    public function contact(Request $request ,\Swift_Mailer $mailer)
-    {
-        $contact=new Contact();
-        $form = $this->createFormBuilder($contact)
-                ->add('nom',TextType::class,array('attr'=>array('placeholder'=>'Votre nom'),'label'=>false))
-                ->add('email',TextType::class,array('attr'=>array('placeholder'=>'Email'),'label'=>false))
-                ->add('subject',TextType::class,array('attr'=>array('placeholder'=>'Objet'),'label'=>false))
-                ->add('message',TextareaType::class,array('attr'=>array('placeholder'=>'Votre message',),'label'=>false))
-                ->add('Envoyer',SubmitType::class,array('attr'=>array('class'=>'btn btn-primary pull-right')))
-                ->getForm();
-                $form->handleRequest($request);
-
-                  if ($form->isSubmitted() && $form->isValid()) {
-
-                    $contact = $form->getData();
-                    $this->sendMailContact($contact,$mailer);
-                    $entityManager = $this->getDoctrine()->getManager();
-                    $entityManager->persist($contact);
-                    $entityManager->flush();
-                    
-                    return $this->redirectToRoute('home');
-                  }
-        return $this->render('home/contact.html.twig',array('form'=>$form->createView()));
-    }
-
     /**
      * @Route("/demande", name="devis")
      */
