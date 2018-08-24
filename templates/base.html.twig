@@ -45,6 +45,33 @@
         <script src="{{ asset('build/js/jquery.prettyPhoto.js') }}"></script>
 	    <script src="{{ asset('build/js/bootstrap.min.js') }}"></script>
         <script src="{{ asset('build/js/main.js') }}"></script>
+        <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
+        <script>
+	       Weglot.setup({
+           api_key: "wg_cba3e3d8f7ee1f52851969b0c45e5b7e5 ",
+           originalLanguage: "fr",
+           destinationLanguages : "ar,en",
+           styleOpt : { fullname: true , withname: true , is_dropdown: true , classF: "wg-flags flag-3" },
+           exceptions: "#not-this-element,.gute,.buro,.logo",
+           excludePaths: "",
+           dynamic: ".a-container-of-dynamic-content",
+           autoSwitch: true,
+           translateSearch: false,
+           switchers: [
+             {
+               styleOpt:{
+                 fullname: true,
+                 withname: true,
+                 is_dropdown: true,
+                 classF: "wg-flags flag-3"
+               },
+               containerCss: "",
+               target: ".site-header__section--title",
+               sibling: null
+             }
+           ]
+         });
+        </script>
         {% endblock %}
     </body>
 </html>
