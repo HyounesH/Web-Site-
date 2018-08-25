@@ -106,5 +106,4 @@ class HomeController extends Controller
         );
         $mailer->send($message);
         }
-    
 }
