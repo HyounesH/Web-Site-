@@ -25,6 +25,7 @@ Encore
    .addEntry('js/html5shiv','./assets/js/html5shiv.js')
    .addEntry('js/main','./assets/js/main.js')
    .addEntry('js/price-range','./assets/js/price-range.js')
+   .addEntry('js/app','./assets/js/app.js')
    .addStyleEntry('css/app', './assets/css/app.css')
     // uncomment if you use TypeScript
     //.enableTypeScriptLoader()
