@@ -199,11 +199,6 @@ p .buro {
 .btn:hover { color: #fff; min-width: 100%; transition: all .4s cubic-bezier(0.46, 0, 0.07, 1); }
 
 /*-----Gallery------*/
-body {
-    padding: 30px 0;
-    position: relative;
-  }
-  
   .gallery {
     overflow: hidden;
   }
