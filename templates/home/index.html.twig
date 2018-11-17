@@ -256,82 +256,7 @@ Parfois, il vous suffit de noter les choses, de réorganiser votre classeur ou d
 					<div id="gmap" class="contact-map">
 					</div>
 				</div>			 		
-			</div>   	
-    		<div class="row">  	
-	    		<div class="col-sm-8">
-	    			<div class="contact-form">
-	    				<h2 class="title text-center">Formulaire de contact</h2>
-	    				<div class="status alert alert-success" style="display: none"></div>
-				    	<form id="main-contact-form" class="contact-form row" name="contact-form" method="post">
-				            <div class="form-group col-md-6">
-				                {{form_widget(form.nom,{'attr':{'class':'form-control'}})}}
-                                {% if form_errors(form.nom) %}
-                                <div class="alert alert-danger">
-                                {{form_errors(form.nom)}}
-                                </div>
-                                {% endif %}
-				            </div>
-				            <div class="form-group col-md-6">
-							    {{form_widget(form.email,{'attr':{'class':'form-control'}})}}
-                                {% if form_errors(form.email) %}
-                                <div class="alert alert-danger">
-                                {{form_errors(form.email)}}
-                                </div>
-                                {% endif %}
-				            </div>
-				            <div class="form-group col-md-12">
-							    {{form_widget(form.subject,{'attr':{'class':'form-control'}})}}
-                                {% if form_errors(form.subject) %}
-                                <div class="alert alert-danger">
-                                {{form_errors(form.subject)}}
-                                </div>
-                                {% endif %}
-				            </div>
-				            <div class="form-group col-md-12">
-				                {{form_widget(form.message,{ 'id': 'message' },{'attr':{'class':'form-control','rows':'8'}})}}
-                                {% if form_errors(form.message) %}
-                                <div class="alert alert-danger">
-                                {{form_errors(form.message)}}
-                                </div>
-                                {% endif %}
-				            </div>                        
-				            <div class="form-group col-md-12">
-				                 {{ form_rest(form) }}
-				            </div>
-				        </form>
-	    			</div>
-	    		</div>
-	    		<div class="col-sm-4">
-	    			<div class="contact-info">
-	    				<h2 class="title text-center">Contact Info</h2>
-	    				<address>
-	    					<p><b>gite.buro</b></p>
-							<p>935 Avenue Mohamed v immeuble fatiha</p>
-							<p>Rabat MAR</p>
-							<p>Mobile: +212 6 60 22 14 20</p>
-							<p>Fax: +212 5 60 22 14 20</p>
-							<p>Email: gite.buro@contact.com</p>
-	    				</address>
-	    				<div class="social-networks">
-	    					<h2 class="title text-center">Réseau social</h2>
-							<ul>
-								<li>
-									<a href="#"><i class="fa fa-facebook"></i></a>
-								</li>
-								<li>
-									<a href="#"><i class="fa fa-twitter"></i></a>
-								</li>
-								<li>
-									<a href="#"><i class="fa fa-google-plus"></i></a>
-								</li>
-								<li>
-									<a href="#"><i class="fa fa-youtube"></i></a>
-								</li>
-							</ul>
-	    				</div>
-	    			</div>
-    			</div>    			
-	    	</div>  
+			</div>   	  
     	</div>	
     </div><!--/#contact-page-->
                       
@@ -340,7 +265,29 @@ Parfois, il vous suffit de noter les choses, de réorganiser votre classeur ou d
 			</div>
 		</div>
 	</section>	
-	
+	<br/>
+	<section class="contact">
+  <div class="contacimg"></div>
+  <div class="row">
+    <div class="contactinfo">
+      <h1>Prenez contact</h1>
+      <p>Des produits et des conseils pour tous vos besoins informatiques et High Tech, qu’ils soient personnels ou professionnels, n'hésitez pas de nous contacter .</p>
+      <ul>
+	    <li></li>
+        <li class="contat-mail">gite.buro@contact.com</li>
+        <li class="contat-phone">+212 (0) 5 60 22 14 20</li>
+        <li class="contat-map">N°10 Immeuble Dakhla Agadir - Avenue mohamed 5<br> Agadir, Maroc</li>
+      </ul>
+    </div>
+
+    <div class="sendemail">
+      <h1>Faites le premier pas</h1>
+      <p>Profitez d’une expertise professionnelle et des produits certifiés de qualité. Faites confiance à <span class="gite">gite</span>.<span class="buro">buro</span> et venez acheter tout ce dont vous avez besoin aux meilleurs prix et avec l’assurance de <b> professionnels !</b>. N’hésitez surtout pas à nous envoyer un message !</p>
+      <a href="{{url('contact')}}" class="btn">Envoyer un email</a>
+    </div>
+
+  </div>
+</section>
 {% endblock %}
 {% block javascripts %} {{parent()}}
 <script>

@@ -25,27 +25,7 @@ class HomeController extends Controller
      */
     public function index(Request $request ,\Swift_Mailer $mailer)
     {
-        $contact=new Contact();
-        $form = $this->createFormBuilder($contact)
-                ->add('nom',TextType::class,array('attr'=>array('placeholder'=>'Votre nom'),'label'=>false))
-                ->add('email',EmailType::class,array('attr'=>array('placeholder'=>'Email'),'label'=>false))
-                ->add('subject',TextType::class,array('attr'=>array('placeholder'=>'Objet'),'label'=>false))
-                ->add('message',TextareaType::class,array('attr'=>array('rows'=>'8','placeholder'=>'Votre message',),'label'=>false))
-                ->add('Envoyer',SubmitType::class,array('attr'=>array('class'=>'btn btn-primary pull-right')))
-                ->getForm();
-                $form->handleRequest($request);
-
-                  if ($form->isSubmitted() && $form->isValid()) {
-
-                    $contact = $form->getData();
-                    $this->sendMailContact($contact,$mailer);
-                    $entityManager = $this->getDoctrine()->getManager();
-                    $entityManager->persist($contact);
-                    $entityManager->flush();
-                    
-                    return $this->redirectToRoute('home');
-                  }
-        return $this->render('home/index.html.twig',array('form'=>$form->createView()));
+        return $this->render('home/index.html.twig');
     }
         /**
      * @Route("/catalogue", name="catalogue")
@@ -80,7 +60,7 @@ class HomeController extends Controller
                 ->add('email',EmailType::class,array('attr'=>array('placeholder'=>'Email'),'label'=>false))
                 ->add('subject',TextType::class,array('attr'=>array('placeholder'=>'Objet'),'label'=>false))
                 ->add('message',TextareaType::class,array('attr'=>array('rows'=>'8','placeholder'=>'Votre message',),'label'=>false))
-                ->add('Commander',SubmitType::class,array('attr'=>array('class'=>'btn btn-primary pull-right')))
+                ->add('Envoyer',SubmitType::class,array('attr'=>array('class'=>'btn btn-primary pull-right')))
                 ->getForm();
                 $form->handleRequest($request);
 

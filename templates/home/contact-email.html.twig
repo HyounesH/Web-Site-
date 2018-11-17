@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}gite.buro {% endblock %}
+{% block stylesheet %}
+{% endblock %}
+{% block body %}
+{% set container='margin-bottom:0px;background-color:#f1f1f1;padding-right: 60px;padding-left: 60px;' %}
+{% set container_footer='margin-bottom:0px;background-color:#333;padding-right: 60px;padding-left: 60px;' %}
+{% set jumbotron='padding-right: 60px;padding-left: 60px;border-radius: 6px;font-size: 21px;font-weight: 200;padding-bottom:40px;padding-top:40px;background-color:#fff;' %}
+{% set row='display:flex;margin-right: -15px;margin-left: -15px;' %}
+{% set col_sm_2='width: 15.666666666666664%;position: relative;min-height: 1px;padding-right: 15px;padding-left: 15px;' %}
+{% set col_sm_10='width: 83.33333333333334%;position: relative;min-height: 1px;padding-right: 15px;padding-left: 15px;float:left;'%}
+{% set title_demande_mail='margin-top:10px;font-family: Arial;font-size: 42px;color: #1a1a1a;' %}
+{% set btn_success='display: inline-block;padding: 6px 12px;text-decoration: none;margin-bottom: 0;font-size: 14px;font-weight: normal;line-height: 1.428571429;text-align: center;white-space: nowrap;vertical-align: middle;cursor: pointer;border: 1px solid transparent;border-radius: 4px;color: #fff;background-color: #5cb85c;border-color: #4cae4c;'%}
+{% set footer='background:#333;padding-top:15px;padding-bottom:15px;color:#666;margin-top:-10px;' %}
+{% set a_social='font-size:24px;color:#666;text-decoration: none;' %}
+{% set ul_social='list-style:none;margin:10px 0 0;padding:0;display:inline-block;float:right;' %}
+{% set li_social='display:inline-block;margin:0 5px;' %}
+{% set cp='margin-top:11px;' %}
+{% set social='width:50%;' %}
+<div style="{{container}}">
+  <div  style="{{jumbotron}}">
+      <a href="{{url('home')}}"><img src="{{absolute_url('images/home/logo_en.png')}}" alt="gite.buro" target="_blank" /></a>
+      <p style="{{title_demande_mail}}">{{contact.subject}}</p>
+      <div style="{{row}}">
+      <div style="{{col_sm_2}}">
+      <p><strong>Nom</strong></p>
+      <p><strong>Email</strong></p>
+      <p><strong>Message</strong></p>
+      </div>
+      <div style="{{col_sm_10}}">
+      <p><strong>:&nbsp;&nbsp;</strong>{{contact.nom}}</p>
+      <p><strong>:&nbsp;&nbsp;</strong>{{contact.email}}</p>
+      <p><strong>:&nbsp;&nbsp;</strong>{{contact.message}}</p>
+      </div>
+      </div>
+      <br/>
+      <p>
+      <a href="{{'mailto:' ~ contact.email ~ '?subject=Repondre à la ' ~ contact.subject }}" style="{{btn_success}}">Répondre</a>
+      </p>
+  </div>
+  <footer  style="{{footer}}">
+    <div style="{{container_footer}}">
+       <div>
+        <div style="{{row}}">
+            <div style="{{cp}}">
+                &nbsp;&nbsp;&nbsp;&copy; 2018 gite.buro . All Rights Reserved.
+            </div>
+            <!--/Copyright-->
+
+            <div style="{{social}}">
+                <ul style="{{ul_social}}">
+                    <li style="{{li_social}}"><a href="#" style="{{a_social}}"><i class="fa fa-facebook"></i></a></li>
+                    <li style="{{li_social}}"><a href="#" style="{{a_social}}"><i class="fa fa-twitter"></i></a></li>
+                    <li style="{{li_social}}"><a href="#" style="{{a_social}}"><i class="fa fa-linkedin"></i></a></li>
+                    <li style="{{li_social}}"><a href="#" style="{{a_social}}"><i class="fa fa-dribbble"></i></a></li>
+                    <li style="{{li_social}}"><a href="#" style="{{a_social}}"><i class="fa fa-google-plus"></i></a></li>
+                    <li style="{{li_social}}"><a href="#"style=" {{a_social}}"><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i></a></li>                
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+{% endblock %}
+{% block footer %}
+{% endblock %}

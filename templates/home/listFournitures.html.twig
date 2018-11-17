@@ -1,0 +1,125 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}gite.buro {% endblock %}
+{% block stylesheet %} {{parent()}}{% endblock %}
+{% block body %}
+<header id="header"><!--header-->
+		<div class="header_top"><!--header_top-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="contactinfo">
+							<ul class="nav nav-pills">
+								<li><a href="#"><i class="fa fa-phone"></i> +212 5 60 22 14 20</a></li>
+								<li><a href="#"><i class="fa fa-envelope"></i> gite.buro@contact.com</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="social-icons pull-right">
+							<ul class="nav navbar-nav">
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+								<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header_top-->
+
+        <div class="header-middle"><!--header-middle-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-3">
+						<div class="logo pull-left">
+							<a href="{{url('home')}}"><img src="{{asset('images/home/logo_en.png')}}" alt="" /></a>
+						</div>
+					</div>
+					<div class="col-sm-9">
+                       <div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<div class="shop-menu pull-right">
+							<ul class="nav navbar-nav collapse navbar-collapse">
+								<li><a href="{{ url('home') }}">Acceuil</a></li>
+								<li><a href="{{url('about')}}">Qui sommes-nous</a></li>
+								<li><a href="{{url('service')}}"> Services</a></li>
+								<li><a href="{{'catalogue'}}">catalogue</a></li>
+								<li><a href="{{ url('contact')}}"> Contatez-nous</a></li>
+								<li class="dropdown"><a href="#" class="active">Rentrée scolaire<i class="fa fa-angle-down"></i></a>
+                                    <ul role="menu" class="sub-menu">
+                                        <li><a href="{{url('listFournitures')}}" class="active">Liste fourniture</a></li>
+										<li><a href="{{url('commandFournitures')}}">Commander fourniture</a></li>
+                                    </ul>
+                                </li> 
+                                <li><a href="{{url('devis')}}"> Demande devis</a></li>
+							</ul>
+						</div>
+					</div>   
+				</div>
+			</div>
+		</div><!--/header-middle-->
+		<br/>
+        <div class="container">
+          <div class="row">
+             <div class="col-sm-3 pull-right">
+				<div class="search_box pull-right">
+					<input type="text" placeholder="Search"/>
+			    </div>
+			 </div>
+          </div>
+        </div>
+   </header>
+   <br/>
+   <section class="listeFournitures">
+		<div class="container">
+			<div class="row">
+				<div class="padding-right">
+					<div class="features_items">
+					   <h2 class="titre_page">Télécharger liste des fournitures</h2>
+					   <div class="col-sm-8">
+					   <video width="90%" height="300" controls>
+                       <source src="{{ asset('video/video.mp4')}}" type="video/mp4">
+                        Your browser does not support the video tag.
+                       </video>
+					   </div>
+					   <div class="col-sm-4">
+					    <form method="post">
+						<p style="margin-bottom: 16px;">
+					     chez <span class="gite">gite</span>.<span class="buro">buro</span> vous pouvez télécharger la liste des fournitures qui vous voulez pour la consulter
+						</p>
+						<div class="form-group">
+						<label><b>l'institut :</b></label>
+						<select class="form-control">
+						   <option value="L'institus Pascale">L'institus Pascale</option>
+	                       <option value="qalam">Qalam</option>
+	                       <option value="L'institut jean-marie-monier">L'institut jean-marie-monier</option>
+                        </select>
+						</div>
+						<div class="form-group">
+						<label><b>Niveau :</b></label>
+						<select class="form-control">
+						   <option value="primaire">Primaire</option>
+	                       <option value="secondaire">secondaire</option>
+	                       <option value="lycée">Lycée</option>
+                        </select>
+						</div>
+						<input type="submit" class="btn btn-success" value="Télécharger">
+						</form>
+					   </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </section>
+	<br/>
+	<br/>
+{% endblock %}

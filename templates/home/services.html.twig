@@ -1,0 +1,123 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}gite.buro {% endblock %}
+{% block stylesheet %} {{parent()}}{% endblock %}
+{% block body %}
+<header id="header"><!--header-->
+		<div class="header_top"><!--header_top-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="contactinfo">
+							<ul class="nav nav-pills">
+								<li><a href="#"><i class="fa fa-phone"></i> +212 5 60 22 14 20</a></li>
+								<li><a href="#"><i class="fa fa-envelope"></i> gite.buro@contact.com</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="social-icons pull-right">
+							<ul class="nav navbar-nav">
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+								<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+        </div><!--/header_top-->
+        <div class="header-middle"><!--header-middle-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-3">
+						<div class="logo pull-left">
+							<a href="{{url('home')}}"><img src="{{asset('images/home/logo_en.png')}}" alt="" /></a>
+						</div>
+					</div>
+					<div class="col-sm-9">
+                       <div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<div class="shop-menu pull-right">
+							<ul class="nav navbar-nav collapse navbar-collapse">
+								<li><a href="{{ url('home')}}">Acceuil</a></li>
+								<li><a href="{{ url('about')}}">Qui sommes-nous</a></li>
+                                <li><a href="{{url('service')}}" class="active"> Services</a></li>
+                                <li><a href="{{url('catalogue')}}">Catalogue</a></li>
+								<li><a href="{{url('contact')}}"> Contatez-nous</a></li>
+								<li class="dropdown"><a href="#">Rentrée scolaire<i class="fa fa-angle-down"></i></a>
+                                    <ul role="menu" class="sub-menu">
+                                        <li><a href="{{url('listFournitures')}}">Liste fourniture</a></li>
+										<li><a href="{{url('commandFournitures')}}">Commander fourniture</a></li>
+                                    </ul>
+                                </li> 
+                                <li><a href="{{url('devis')}}"> Demande devis</a></li>
+							</ul>
+						</div>
+					</div>   
+				</div>
+			</div>
+		</div><!--/header-middle-->
+        <br/>
+        <br/>
+        <section class="services">
+		<div class="container">
+			<div class="row">
+        <p class="sec-sub"><span class="gite">gite</span>.<span class="buro">buro</span> accompagne ses clients et les offres les meilleurs produits de qualités à des prix abordables par tous et toutes .</p>
+
+        <ul>
+       <li>
+           <h2>Service informatique</h2>
+           <p>Vous recherchez des conseils, des bons plans ou encore un service après-vente de qualité, <span class="gite">gite</span>.<span class="buro">buro</span> et ses collaborateurs, tous passionnés par l’informatique et l’univers High Tech, sauront répondre à vos besoins, que ce soit sur internet ou dans l’un de nos magasins près de chez vous.
+Ordinateurs Portables, Configurations PC sur mesure, Composants Informatiques, Imprimantes Multifonctions, Moniteurs, autres périphériques, etc. Que vous soyez Gamer, Professionnel, Fan de High Tech ou néophyte, <span class="gite">gite</span>.<span class="buro">buro</span> s’efforce de vous proposer les meilleurs prix… le conseil en plus ! </p>
+
+          <p>Si vous êtes à la recherche du meilleur en terme de matériel informatique, vous êtes à la bonne adresse avec <span class="gite">gite</span>.<span class="buro">buro</span> . Des produits de qualités à des prix abordables par tous et toutes, 
+		  <span class="gite">gite</span>.<span class="buro">buro</span> propose des produits aussi bien pour les amateurs et particuliers que pour les connaisseurs et professionnels. Vous êtes à la recherche d’un ordinateur de bureau de qualité, puissant et performant ? <span class="gite">gite</span>.<span class="buro">buro</span> a ce qu’il vous faut, du pc portable gamer au tapis de souris, vous trouverez tous les produits dont vous avez besoin. Spécialisé dans la vente de high-tech, <span class="gite">gite</span>.<span class="buro">buro</span> vous proposera autant de tablettes, téléphones et ordinateurs que d’accessoires et périphériques. Des produits performants qui conviendront aussi bien aux particuliers qu’aux professionnels ! Asus, MSI, Acer, Apple, Samsung ou encore Lenovo, retrouvez les meilleures marques du marché chez <span class="gite">gite</span>.<span class="buro">buro</span> .</p>
+       <li/>
+       <li>
+           <h2>Service bureautique</h2>
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+		   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>           
+       </li>
+       <li>
+           <h2>Service scolaire</h2>
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+		   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>           
+       </li>
+    </ul>
+    </div>
+ </div>
+</section>
+<br/>
+<br/>
+<section class="contact">
+  <div class="contacimg"></div>
+  <div class="row">
+    <div class="contactinfo">
+      <h1>Prenez contact</h1>
+      <p>Des produits et des conseils pour tous vos besoins informatiques et High Tech, qu’ils soient personnels ou professionnels, n'hésitez pas de nous contacter .</p>
+      <ul>
+	    <li></li>
+        <li class="contat-mail">gite.buro@contact.com</li>
+        <li class="contat-phone">+212 (0) 5 60 22 14 20</li>
+        <li class="contat-map">N°10 Immeuble Dakhla Agadir - Avenue mohamed 5<br> Agadir, Maroc</li>
+      </ul>
+    </div>
+
+    <div class="sendemail">
+      <h1>Faites le premier pas</h1>
+      <p>Profitez d’une expertise professionnelle et des produits certifiés de qualité. Faites confiance à <span class="gite">gite</span>.<span class="buro">buro</span> et venez acheter tout ce dont vous avez besoin aux meilleurs prix et avec l’assurance de <b> professionnels !</b>. N’hésitez surtout pas à nous envoyer un message !</p>
+      <a href="{{url('contact')}}" class="btn-mail">Envoyer un email</a>
+    </div>
+
+  </div>
+</section>
+{% endblock %}
